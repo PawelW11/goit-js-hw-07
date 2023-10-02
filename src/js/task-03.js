@@ -12,3 +12,15 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+// Wybieramy element ul.gallery
+const galleryList = document.querySelector(".gallery");
+
+// Tworzymy łańcuch szablonu HTML, który zawiera wszystkie obrazy i opakowuje je w znaczniki <li>
+const galleryHTML = images.map((image) => `
+  <li>
+    <img src="${image.url}" alt="${image.alt}">
+  </li>
+`).join("");
+
+// Dodajemy galerię do listy ul.gallery za pomocą insertAdjacentHTML
+galleryList.insertAdjacentHTML("beforeend", galleryHTML);
