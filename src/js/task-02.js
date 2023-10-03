@@ -6,11 +6,12 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
+
 // Wybieramy element ul#ingredients
 const ingredientsList = document.querySelector("#ingredients");
 
-// Tworzymy elementy <li> i dodajemy je do listy
-ingredients.forEach((ingredient) => {
+// Wykorzystujemy map() do przekształcenia tablicy ingredients w tablicę elementów <li>
+const ingredientsArr = ingredients.map((ingredient) => {
   // Tworzymy nowy element <li>
   const li = document.createElement("li");
 
@@ -20,6 +21,8 @@ ingredients.forEach((ingredient) => {
   // Dodajemy klasę "item" do elementu <li>
   li.classList.add("item");
 
-  // Dodajemy element <li> do listy ul#ingredients
-  ingredientsList.appendChild(li);
+  return li; // Zwracamy element <li> z map()
 });
+
+// Dodajemy wszystkie elementy <li> do listy ul#ingredients w jednej operacji
+ingredientsList.append(...ingredientsArr);
