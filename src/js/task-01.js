@@ -6,7 +6,7 @@ const categoryItems = categoriesList.querySelectorAll("li.item");
 
 // Liczymy liczbę kategorii
 const numberOfCategories = categoryItems.length;
-console.log(`Number of categories: ${numberOfCategories}`);
+console.log('Number of categories:', numberOfCategories);
 
 // Iterujemy przez każdy element li.item i wyświetlamy informacje o kategorii
 categoryItems.forEach((categoryItem) => {
@@ -20,6 +20,6 @@ categoryItems.forEach((categoryItem) => {
   const numberOfElements = categoryElements.length;
 
   // Wyświetlamy informacje o kategorii w konsoli
-  console.log(`Category: ${categoryTitle}`);
-  console.log(`Elements: ${numberOfElements}`);
+  console.log('Category:', categoryTitle);
+  console.log('Elements:', numberOfElements);
 });
